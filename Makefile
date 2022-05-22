@@ -34,11 +34,11 @@ $(MLX_DIR):
 $(NAME) : $(OBJS)
 	make -C $(PRINTF_DIR)
 	make -C $(MLX_DIR)
-	$(CC) $(CFLAGS) $(OBJS) $(MLXFLAGS) $(PRINTF_DIR)libftprintf.a -o $@
+	$(CC) $(CFLAGS) -I $(INCLUDE) $(OBJS) $(MLXFLAGS) $(PRINTF_DIR)libftprintf.a -o $@
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c
 	mkdir -p $(OBJS_DIR)
-	$(CC) -I/usr/include -Imlx_linux -O3 -c $< -o $@
+	$(CC) $(CFLAGS) -I $(INCLUDE) -I /usr/include -Imlx_linux -O3 -c $< -o $@
 
 .PHONY: clean
 clean:

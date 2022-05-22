@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/get_next_line.h"
+#include "get_next_line.h"
 
 static char	*ft_free_pass(char *for_free, char *newptr)
 {

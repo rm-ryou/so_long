@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 static void	read_img(t_all_conf *info, void **img, char *file_path)
 {
@@ -19,7 +19,7 @@ static void	read_img(t_all_conf *info, void **img, char *file_path)
 	img_tmp = info->img_info;
 	*img = mlx_xpm_file_to_image(info->mlx, file_path, \
 				&img_tmp->img_width, &img_tmp->img_height);
-	if (img == NULL)
+	if (*img == NULL)
 		put_message(info, "Error\nmlx_xpm_file_to_image is error");
 }
 

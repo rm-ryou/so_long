@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 void	init_img(t_all_conf *info)
 {
@@ -32,7 +32,7 @@ void	init_player(t_all_conf *info)
 	if (info->player_info == NULL)
 		put_message(info, "Error\nplayer malloc error");
 	info->player_info->x = 0;
-	info->player_info->x = 0;
+	info->player_info->y = 0;
 	info->player_info->count_collect = 0;
 	info->player_info->count_move = 0;
 }

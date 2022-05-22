@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 static void	to_img(t_all_conf *info, char *c, int x, int y)
 {
